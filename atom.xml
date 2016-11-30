@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-11-22T13:03:48.733Z</updated>
+  <updated>2016-11-30T03:16:29.041Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/11/20/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/"/>
     <id>http://yoursite.com/2016/11/20/个人简历/</id>
     <published>2016-11-20T10:07:08.000Z</published>
-    <updated>2016-11-22T13:03:48.733Z</updated>
+    <updated>2016-11-30T03:16:29.041Z</updated>
     
     <content type="html"><![CDATA[<h3 id="个人资料："><a href="#个人资料：" class="headerlink" title="个人资料："></a>个人资料：</h3><pre><code>姓名：梁晶                 出生日期：1995年8月24日
 
@@ -68,6 +68,7 @@
 </code></pre><h3 id="自我评价："><a href="#自我评价：" class="headerlink" title="自我评价："></a>自我评价：</h3><pre><code>具有较强的进取心、责任感、务实精神，团队合作能力和沟通能力。
 善于适应新环境，学习新知识，发现并总结新知识的内在规律。
 对工作充满热情与活力，热衷于IT行业。
+</code></pre><h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><pre><code>[360杀毒] https://llandaa.github.io/360kill-virus/360 
 </code></pre>]]></content>
     
     <summary type="html">
