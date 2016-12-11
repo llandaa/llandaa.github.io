@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-03T16:34:33.888Z</updated>
+  <updated>2016-12-05T12:16:13.381Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/12/03/js%E9%9D%A2%E8%AF%95%E7%AF%87/"/>
     <id>http://yoursite.com/2016/12/03/js面试篇/</id>
     <published>2016-12-03T04:47:23.000Z</published>
-    <updated>2016-12-03T16:34:33.888Z</updated>
+    <updated>2016-12-05T12:16:13.381Z</updated>
     
     <content type="html"><![CDATA[<h2 id="初级Javascript："><a href="#初级Javascript：" class="headerlink" title="初级Javascript："></a>初级Javascript：</h2><p>1.JavaScript是一种什么样的语言，它有哪些特点？<br>  没有标准答案。<br>  示例答案：JavaScript 是一种脚本语言，官方名称为 ECMAScript（因定义语言的标准为 ECMA-262）。JS 的主要特点：1. 语法类似于常见的高级语言，如 C 和 Java；2. 脚本语言，不需要编译就可以由解释器直接运行；3. 变量松散定义，属于弱类型语言；4. 面向对象的。<br>JS 最初是为网页设计而开发的，现在也是 Web 开发的重要语言。它支持对浏览器（浏览器对象模型，BOM）和 HTML 文档（文档对象模型，DOM）进行操作，而使网页呈现动态的交互特性。<br>严格的说，JS 只是 ECMAScript 的一种实现，是 ECMAScript 和 BOM、DOM 组成的一种 Web 开发技术。</p>
 <p>2.JavaScript的数据类型都有什么？<br>    基本数据类型：String,boolean,Number,Undefined, Null<br>    引用数据类型：Object(Array,Date,RegExp,Function)<br>    那么问题来了，如何判断某变量是否为数组数据类型？</p>
@@ -64,6 +64,8 @@
 <p>14.var numberArray = [3,6,2,4,1,5];<br>1) 实现对该数组的倒排，输出[5,1,4,2,6,3]<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var numberArray = [3,6,2,4,1,5];</div><div class="line">numberArray.reverse()</div><div class="line">alert(numberArray)</div></pre></td></tr></table></figure></p>
 <p>2) 实现对该数组的降序排列，输出[6,5,4,3,2,1]<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var numberArray = [3,6,2,4,1,5];</div><div class="line">numberArray.sort(function (a,b) &#123;</div><div class="line">return b-a</div><div class="line">&#125;)</div><div class="line">alert(numberArray)</div></pre></td></tr></table></figure></p>
 <p>15.输出今天的日期，以YYYY-MM-DD的方式，比如今天是2014年9月26日，则输出2014-09-26<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var d = new Date();</div><div class="line">var year = d.getFullYear();</div><div class="line">var month = d.getMonth() + 1;</div><div class="line">var day = d.getDate();</div><div class="line">month = month&lt;10? &quot;0&quot;+month : month;</div><div class="line">day = day &lt; 10? &quot;0&quot;+day : day;</div><div class="line">alert(year + &quot;-&quot; + month + &quot;-&quot; + day )</div></pre></td></tr></table></figure></p>
+<p>16.将字符串”<tr><td>{$id}</td><td>{$name}</td></tr>”中的{$id}替换成10，{$name}替换成Tony （使用正则表达式）<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert( &quot; &lt;tr&gt;&lt;td&gt;&#123;$id&#125;&lt;/td&gt;&lt;td&gt;&#123;$id&#125;_&#123;$name&#125;&lt;/td&gt;&lt;/tr&gt;&quot;.replace(/&#123;\$id&#125;/g,&apos;10&apos;).replace(/&#123;\$name&#125;/g,&apos;tony&apos;))</div></pre></td></tr></table></figure></p>
+<p>17.为了保证页面输出安全，我们经常需要对一些特殊的字符进行转义，请写一个函数escapeHtml，将&lt;, &gt;, &amp;, “进行转义<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert( &quot; &lt;tr&gt;&lt;td&gt;&#123;$id&#125;&lt;/td&gt;&lt;td&gt;&#123;$id&#125;_&#123;$name&#125;&lt;/td&gt;&lt;/tr&gt;&quot;.replace(/&#123;\$id&#125;/g,&apos;10&apos;).replace(/&#123;\$name&#125;/g,&apos;tony&apos;))</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
@@ -80,7 +82,7 @@
     <link href="http://yoursite.com/2016/11/20/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/"/>
     <id>http://yoursite.com/2016/11/20/个人简历/</id>
     <published>2016-11-20T10:07:08.000Z</published>
-    <updated>2016-11-30T06:12:18.682Z</updated>
+    <updated>2016-12-11T12:07:11.152Z</updated>
     
     <content type="html"><![CDATA[<h3 id="个人资料："><a href="#个人资料：" class="headerlink" title="个人资料："></a>个人资料：</h3><pre><code>姓名：梁晶                 出生日期：1995年8月24日
 
@@ -127,8 +129,10 @@
 </code></pre><h3 id="奖励情况："><a href="#奖励情况：" class="headerlink" title="奖励情况："></a>奖励情况：</h3><pre><code>2014.10           被评为“三好学生”
 2013-2015         连续两次获得三等奖学金
 </code></pre><h3 id="个人技能："><a href="#个人技能：" class="headerlink" title="个人技能："></a>个人技能：</h3><pre><code>熟练掌握JavaScript, jQuery , css3, html5等语言开发网页
-熟练Bootstrap，AmazeUI , Materialize等框架开发响应式网页
-熟练fullpage , angular.js 等框架开发单页面网页
+熟练掌握Bootstrap，AmazeUI , Materialize等框架开发响应式网页
+熟练掌握fullpage , angular.js 等框架开发单页面网页
+熟练掌握sass,less等CSS预处理器。
+熟练掌握Ajax的异步传输机制，能够很好的与后台进行数据交互
 熟悉ps , ai 等软件设计网页以及APP界面
 熟悉 SVN,Git等版本控制工具，并用Github配合Hexo搭建了自己的博客。
 </code></pre><h3 id="自我评价："><a href="#自我评价：" class="headerlink" title="自我评价："></a>自我评价：</h3><pre><code>具有较强的进取心、责任感、务实精神，团队合作能力和沟通能力。
