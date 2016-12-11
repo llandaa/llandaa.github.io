@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-11T12:08:35.768Z</updated>
+  <updated>2016-12-11T12:11:42.883Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/12/03/js%E9%9D%A2%E8%AF%95%E7%AF%87/"/>
     <id>http://yoursite.com/2016/12/03/js面试篇/</id>
     <published>2016-12-03T04:47:23.000Z</published>
-    <updated>2016-12-11T12:08:35.768Z</updated>
+    <updated>2016-12-11T12:11:42.883Z</updated>
     
     <content type="html"><![CDATA[<h2 id="初级Javascript："><a href="#初级Javascript：" class="headerlink" title="初级Javascript："></a>初级Javascript：</h2><p>1.JavaScript是一种什么样的语言，它有哪些特点？<br>  没有标准答案。<br>  示例答案：JavaScript 是一种脚本语言，官方名称为 ECMAScript（因定义语言的标准为 ECMA-262）。JS 的主要特点：1. 语法类似于常见的高级语言，如 C 和 Java；2. 脚本语言，不需要编译就可以由解释器直接运行；3. 变量松散定义，属于弱类型语言；4. 面向对象的。<br>JS 最初是为网页设计而开发的，现在也是 Web 开发的重要语言。它支持对浏览器（浏览器对象模型，BOM）和 HTML 文档（文档对象模型，DOM）进行操作，而使网页呈现动态的交互特性。<br>严格的说，JS 只是 ECMAScript 的一种实现，是 ECMAScript 和 BOM、DOM 组成的一种 Web 开发技术。</p>
 <p>2.JavaScript的数据类型都有什么？<br>    基本数据类型：String,boolean,Number,Undefined, Null<br>    引用数据类型：Object(Array,Date,RegExp,Function)<br>    那么问题来了，如何判断某变量是否为数组数据类型？</p>
@@ -30,6 +30,7 @@
 <li>方法三.方法一二皆有漏洞，在ECMA Script5中定义了新方法Array.isArray(), 保证其兼容性，最好的方法如下：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">if(typeof Array.isArray===&quot;undefined&quot;) </div><div class="line">&#123; </div><div class="line">  Array.isArray = function(arg)&#123; </div><div class="line">		return Object.prototype.toString.call(arg)===&quot;[object Array]&quot; </div><div class="line">	&#125;;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<a id="more"></a>
 <p>3.已知ID的Input输入框，希望获取这个输入框的输入值，怎么做？(不使用第三方框架)<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.getElementById(“ID”).value</div></pre></td></tr></table></figure></p>
 <p>4.希望获取到页面中所有的checkbox怎么做？(不使用第三方框架)<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var iptList = document.getElementsByTagName(&apos;input&apos;)</div><div class="line">var checkList = [];</div><div class="line">var len = iptList.length;</div><div class="line">when (len--)&#123;</div><div class="line">	if(iptList[len].type == &apos;checkbox&apos;)&#123;</div><div class="line">		checkList.push(iptList[len])</div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
 <p>5.设置一个已知ID的DIV的html内容为xxxx，字体颜色设置为黑色(不使用第三方框架)<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var dom = document.getElementById(“ID”);</div><div class="line">dom.innerHTML = “xxxx”</div><div class="line">dom.style.color = “#000”</div></pre></td></tr></table></figure></p>
@@ -42,7 +43,7 @@
 <li>“事件捕捉” ： 事件由最不具体的节点接受，然后逐级向下，一直到最具体的</li>
 <li>“DOM事件流” ： 三个阶段 ： 事件捕捉 目标阶段 事件冒泡</li>
 </ul>
-<p>7.什么是Ajax和JSON，它们的优缺点。<br>     Ajax是异步JavaScript和XML，用于在web页面中实现异步数据交互<br>     优点：<br>            可以使得页面不重加载全部内容的情况下加载局部内容，减低数据传输量<br>            避免用户不断刷新或者跳转页面，提高用户体验<br>     缺点：<br>            对搜索引擎不友好<br>            要实现ajax下的前后退功能成本较大<br>            可能造成请求数的增加<br>            跨域问题限制<br>    JSON 是一种轻量级的数据交换格式，ECMA的一个子集<br>     优点：轻量级，易于人的阅读和编写，便于机器（JavaScript）解析，支持复合数据类型（数组，对象，字符串，数字）<br><a id="more"></a></p>
+<p>7.什么是Ajax和JSON，它们的优缺点。<br>     Ajax是异步JavaScript和XML，用于在web页面中实现异步数据交互<br>     优点：<br>            可以使得页面不重加载全部内容的情况下加载局部内容，减低数据传输量<br>            避免用户不断刷新或者跳转页面，提高用户体验<br>     缺点：<br>            对搜索引擎不友好<br>            要实现ajax下的前后退功能成本较大<br>            可能造成请求数的增加<br>            跨域问题限制<br>    JSON 是一种轻量级的数据交换格式，ECMA的一个子集<br>     优点：轻量级，易于人的阅读和编写，便于机器（JavaScript）解析，支持复合数据类型（数组，对象，字符串，数字）</p>
 <p>8.看下列代码输出为何？解释原因。<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var a;</div><div class="line">alert(typeof a); // undefined</div><div class="line">alert(b); // 报错</div></pre></td></tr></table></figure></p>
 <p>解释：Undefined是一个只有一个值的数据类型，这个值就是“undefined”，在使用var声明变量但并未对其赋值进行初始化时，这个变量的值就是undefined。而b由于未声明将报错。注意未申明的变量和声明了未赋值的是不一样的。</p>
 <p> 9.看下列代码,输出什么？解释原因。<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var a = null;</div><div class="line">alert(typeof a); //object</div></pre></td></tr></table></figure></p>
@@ -78,19 +79,6 @@
 &lt;li&gt;方法三.方法一二皆有漏洞，在ECMA Script5中定义了新方法Array.isArray(), 保证其兼容性，最好的方法如下：  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;if(typeof Array.isArray===&amp;quot;undefined&amp;quot;) &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123; &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  Array.isArray = function(arg)&amp;#123; &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		return Object.prototype.toString.call(arg)===&amp;quot;[object Array]&amp;quot; &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;#125;;  &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;3.已知ID的Input输入框，希望获取这个输入框的输入值，怎么做？(不使用第三方框架)&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;document.getElementById(“ID”).value&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;4.希望获取到页面中所有的checkbox怎么做？(不使用第三方框架)&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;var iptList = document.getElementsByTagName(&amp;apos;input&amp;apos;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var checkList = [];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var len = iptList.length;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;when (len--)&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	if(iptList[len].type == &amp;apos;checkbox&amp;apos;)&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		checkList.push(iptList[len])&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;5.设置一个已知ID的DIV的html内容为xxxx，字体颜色设置为黑色(不使用第三方框架)&lt;br&gt;    &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;var dom = document.getElementById(“ID”);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;dom.innerHTML = “xxxx”&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;dom.style.color = “#000”&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;6.当一个DOM节点被点击时候，我们希望能够执行一个函数，应该怎么做？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;直接在DOM里绑定事件：&lt;div onclick=”test()”&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;在JS里通过onclick绑定：xxx.onclick = function()&lt;/li&gt;
-&lt;li&gt;通过事件添加进行绑定：xxx.addEventListener(‘click’,function(){})&lt;br&gt;那么问题来了，Javascript的事件流模型都有什么？&lt;/li&gt;
-&lt;li&gt;“事件冒泡” ： 事件开始由具体的元素接受，然后逐级向上传播&lt;/li&gt;
-&lt;li&gt;“事件捕捉” ： 事件由最不具体的节点接受，然后逐级向下，一直到最具体的&lt;/li&gt;
-&lt;li&gt;“DOM事件流” ： 三个阶段 ： 事件捕捉 目标阶段 事件冒泡&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;7.什么是Ajax和JSON，它们的优缺点。&lt;br&gt;     Ajax是异步JavaScript和XML，用于在web页面中实现异步数据交互&lt;br&gt;     优点：&lt;br&gt;            可以使得页面不重加载全部内容的情况下加载局部内容，减低数据传输量&lt;br&gt;            避免用户不断刷新或者跳转页面，提高用户体验&lt;br&gt;     缺点：&lt;br&gt;            对搜索引擎不友好&lt;br&gt;            要实现ajax下的前后退功能成本较大&lt;br&gt;            可能造成请求数的增加&lt;br&gt;            跨域问题限制&lt;br&gt;    JSON 是一种轻量级的数据交换格式，ECMA的一个子集&lt;br&gt;     优点：轻量级，易于人的阅读和编写，便于机器（JavaScript）解析，支持复合数据类型（数组，对象，字符串，数字）&lt;br&gt;
     
     </summary>
     
@@ -213,33 +201,6 @@
     <summary type="html">
     
       &lt;h3 id=&quot;不行就再来一次，没什么大不了&quot;&gt;&lt;a href=&quot;#不行就再来一次，没什么大不了&quot; class=&quot;headerlink&quot; title=&quot;不行就再来一次，没什么大不了&quot;&gt;&lt;/a&gt;不行就再来一次，没什么大不了&lt;/h3&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2016/10/11/hello-world/"/>
-    <id>http://yoursite.com/2016/10/11/hello-world/</id>
-    <published>2016-10-11T13:05:56.048Z</published>
-    <updated>2016-10-11T13:05:56.049Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
     
     </summary>
     
