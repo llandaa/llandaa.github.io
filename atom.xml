@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-11T12:11:42.883Z</updated>
+  <updated>2016-12-11T13:14:58.880Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/12/03/js%E9%9D%A2%E8%AF%95%E7%AF%87/"/>
     <id>http://yoursite.com/2016/12/03/js面试篇/</id>
     <published>2016-12-03T04:47:23.000Z</published>
-    <updated>2016-12-11T12:11:42.883Z</updated>
+    <updated>2016-12-11T13:14:58.880Z</updated>
     
     <content type="html"><![CDATA[<h2 id="初级Javascript："><a href="#初级Javascript：" class="headerlink" title="初级Javascript："></a>初级Javascript：</h2><p>1.JavaScript是一种什么样的语言，它有哪些特点？<br>  没有标准答案。<br>  示例答案：JavaScript 是一种脚本语言，官方名称为 ECMAScript（因定义语言的标准为 ECMA-262）。JS 的主要特点：1. 语法类似于常见的高级语言，如 C 和 Java；2. 脚本语言，不需要编译就可以由解释器直接运行；3. 变量松散定义，属于弱类型语言；4. 面向对象的。<br>JS 最初是为网页设计而开发的，现在也是 Web 开发的重要语言。它支持对浏览器（浏览器对象模型，BOM）和 HTML 文档（文档对象模型，DOM）进行操作，而使网页呈现动态的交互特性。<br>严格的说，JS 只是 ECMAScript 的一种实现，是 ECMAScript 和 BOM、DOM 组成的一种 Web 开发技术。</p>
 <p>2.JavaScript的数据类型都有什么？<br>    基本数据类型：String,boolean,Number,Undefined, Null<br>    引用数据类型：Object(Array,Date,RegExp,Function)<br>    那么问题来了，如何判断某变量是否为数组数据类型？</p>
@@ -66,7 +66,7 @@
 <p>2) 实现对该数组的降序排列，输出[6,5,4,3,2,1]<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var numberArray = [3,6,2,4,1,5];</div><div class="line">numberArray.sort(function (a,b) &#123;</div><div class="line">return b-a</div><div class="line">&#125;)</div><div class="line">alert(numberArray)</div></pre></td></tr></table></figure></p>
 <p>15.输出今天的日期，以YYYY-MM-DD的方式，比如今天是2014年9月26日，则输出2014-09-26<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var d = new Date();</div><div class="line">var year = d.getFullYear();</div><div class="line">var month = d.getMonth() + 1;</div><div class="line">var day = d.getDate();</div><div class="line">month = month&lt;10? &quot;0&quot;+month : month;</div><div class="line">day = day &lt; 10? &quot;0&quot;+day : day;</div><div class="line">alert(year + &quot;-&quot; + month + &quot;-&quot; + day )</div></pre></td></tr></table></figure></p>
 <p>16.将字符串”<tr><td>{$id}</td><td>{$name}</td></tr>”中的{$id}替换成10，{$name}替换成Tony （使用正则表达式）<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert( &quot; &lt;tr&gt;&lt;td&gt;&#123;$id&#125;&lt;/td&gt;&lt;td&gt;&#123;$id&#125;_&#123;$name&#125;&lt;/td&gt;&lt;/tr&gt;&quot;.replace(/&#123;\$id&#125;/g,&apos;10&apos;).replace(/&#123;\$name&#125;/g,&apos;tony&apos;))</div></pre></td></tr></table></figure></p>
-<p>17.为了保证页面输出安全，我们经常需要对一些特殊的字符进行转义，请写一个函数escapeHtml，将&lt;, &gt;, &amp;, “进行转义<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert( &quot; &lt;tr&gt;&lt;td&gt;&#123;$id&#125;&lt;/td&gt;&lt;td&gt;&#123;$id&#125;_&#123;$name&#125;&lt;/td&gt;&lt;/tr&gt;&quot;.replace(/&#123;\$id&#125;/g,&apos;10&apos;).replace(/&#123;\$name&#125;/g,&apos;tony&apos;))</div></pre></td></tr></table></figure></p>
+<p>17.为了保证页面输出安全，我们经常需要对一些特殊的字符进行转义，请写一个函数escapeHtml，将&lt;, &gt;, &amp;, “进行转义<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">    function escapeHtml(str) &#123;</div><div class="line">	return str.replace(/[&lt;&gt;&quot;&amp;]/g, function(match) &#123;</div><div class="line">		switch (match) &#123;</div><div class="line">			case &quot;&lt;&quot;:</div><div class="line">			return &quot;&amp;lt;&quot;;</div><div class="line">			case &quot;&gt;&quot;:</div><div class="line">			return &quot;&amp;gt;&quot;;</div><div class="line">			case &quot;&amp;&quot;:</div><div class="line">			return &quot;&amp;amp;&quot;;</div><div class="line">			case &quot;\&quot;&quot;:</div><div class="line">			return &quot;&amp;quot;&quot;;</div><div class="line">			&#125;</div><div class="line">			&#125;);</div><div class="line">			&#125;</div><div class="line">alert(escapeHtml(&quot;\&quot;&quot;))</div></pre></td></tr></table></figure></p>
 ]]></content>
     
     <summary type="html">
