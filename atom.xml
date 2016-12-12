@@ -108,7 +108,7 @@
     <link href="http://yoursite.com/2016/11/20/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/"/>
     <id>http://yoursite.com/2016/11/20/个人简历/</id>
     <published>2016-11-20T10:07:08.000Z</published>
-    <updated>2016-12-11T12:07:11.152Z</updated>
+    <updated>2016-12-12T14:15:57.985Z</updated>
     
     <content type="html"><![CDATA[<h3 id="个人资料："><a href="#个人资料：" class="headerlink" title="个人资料："></a>个人资料：</h3><pre><code>姓名：梁晶                 出生日期：1995年8月24日
 
@@ -120,8 +120,6 @@
 </code></pre><h3 id="教育背景："><a href="#教育背景：" class="headerlink" title="教育背景："></a>教育背景：</h3><pre><code>2012.09--2016.07  长治学院  计算机科学与技术   本科
                   主修课程：高等语言程序设计、数据结构、Java程序设计语言、数据库原理及应用、软件工程、网站设计及
                            开发、信息系统开发、操作系统、计算机网络、计算机组成原理等
-
-2016.07-2016.12   山西思软科技有限公司        web前端
 </code></pre><h3 id="项目经验："><a href="#项目经验：" class="headerlink" title="项目经验："></a>项目经验：</h3><pre><code>2016.11-2016.12   单页面网页开发               
                   开发环境： HBuilder
                   使用技术:  Angular.js
@@ -179,8 +177,6 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;教育背景：&quot;&gt;&lt;a href=&quot;#教育背景：&quot; class=&quot;headerlink&quot; title=&quot;教育背景：&quot;&gt;&lt;/a&gt;教育背景：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;2012.09--2016.07  长治学院  计算机科学与技术   本科
                   主修课程：高等语言程序设计、数据结构、Java程序设计语言、数据库原理及应用、软件工程、网站设计及
                            开发、信息系统开发、操作系统、计算机网络、计算机组成原理等
-
-2016.07-2016.12   山西思软科技有限公司        web前端
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;项目经验：&quot;&gt;&lt;a href=&quot;#项目经验：&quot; class=&quot;headerlink&quot; title=&quot;项目经验：&quot;&gt;&lt;/a&gt;项目经验：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;2016.11-2016.12   单页面网页开发               
                   开发环境： HBuilder
                   使用技术:  Angular.js
