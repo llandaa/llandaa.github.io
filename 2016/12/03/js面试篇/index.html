@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>js面试篇 | landaBlog</title>
+  <title>js篇 | landaBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="初级Javascript：1.JavaScript是一种什么样的语言，它有哪些特点？  没有标准答案。  示例答案：JavaScript 是一种脚本语言，官方名称为 ECMAScript（因定义语言的标准为 ECMA-262）。JS 的主要特点：1. 语法类似于常见的高级语言，如 C 和 Java；2. 脚本语言，不需要编译就可以由解释器直接运行；3. 变量松散定义，属于弱类型语言；4. 面向对象">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js面试篇">
+<meta property="og:title" content="js篇">
 <meta property="og:url" content="http://yoursite.com/2016/12/03/js面试篇/index.html">
 <meta property="og:site_name" content="landaBlog">
 <meta property="og:description" content="初级Javascript：1.JavaScript是一种什么样的语言，它有哪些特点？  没有标准答案。  示例答案：JavaScript 是一种脚本语言，官方名称为 ECMAScript（因定义语言的标准为 ECMA-262）。JS 的主要特点：1. 语法类似于常见的高级语言，如 C 和 Java；2. 脚本语言，不需要编译就可以由解释器直接运行；3. 变量松散定义，属于弱类型语言；4. 面向对象">
-<meta property="og:updated_time" content="2016-12-13T12:11:43.897Z">
+<meta property="og:updated_time" content="2016-12-13T12:48:01.657Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js面试篇">
+<meta name="twitter:title" content="js篇">
 <meta name="twitter:description" content="初级Javascript：1.JavaScript是一种什么样的语言，它有哪些特点？  没有标准答案。  示例答案：JavaScript 是一种脚本语言，官方名称为 ECMAScript（因定义语言的标准为 ECMA-262）。JS 的主要特点：1. 语法类似于常见的高级语言，如 C 和 Java；2. 脚本语言，不需要编译就可以由解释器直接运行；3. 变量松散定义，属于弱类型语言；4. 面向对象">
   
   
@@ -142,7 +142,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      js面试篇
+      js篇
     </h1>
   
 
@@ -220,7 +220,8 @@
 js部分
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">     var items = document.getElementsByName(&apos;items&apos;);</div><div class="line">     var iskey = true;</div><div class="line">     var isKeyAll = true;</div><div class="line">     function  chooseAll()&#123;</div><div class="line">         if(isKeyAll)&#123;</div><div class="line">             for(var i = 0 ; i &lt; items.length;i++)&#123;</div><div class="line">                 items[i].checked = true;</div><div class="line">             &#125;</div><div class="line">             isKeyAll = false;</div><div class="line">         &#125;else&#123;</div><div class="line">             for(var i = 0 ; i &lt; items.length;i++)&#123;</div><div class="line">                 items[i].checked = false;</div><div class="line">             &#125;</div><div class="line">             isKeyAll = true;</div><div class="line">         &#125;</div><div class="line">     &#125;</div><div class="line">     function choose()&#123;</div><div class="line">         if(iskey)&#123;</div><div class="line">             for(var i = 0 ;i &lt; items.length; i ++)&#123;</div><div class="line">                 if(items[i].checked == false)&#123;</div><div class="line">                     items[i].checked = true</div><div class="line">                 &#125;else&#123;</div><div class="line">                     items[i].checked = false</div><div class="line">                 &#125;</div><div class="line">             &#125;</div><div class="line">             iskey = false;</div><div class="line">         &#125;else&#123;</div><div class="line">             for(var i = 0 ;i &lt; items.length; i ++)&#123;</div><div class="line">                 if(items[i].checked == true)&#123;</div><div class="line">                     items[i].checked = false;</div><div class="line">                 &#125;else&#123;</div><div class="line">                     items[i].checked = true;</div><div class="line">                 &#125;</div><div class="line">		</div><div class="line">             &#125;</div><div class="line">             iskey = true;</div><div class="line">         &#125;</div><div class="line">		</div><div class="line">     &#125;</div><div class="line"> &lt;/script&gt;</div></pre></td></tr></table></figure>
-</code></pre>
+</code></pre><p>25.数组去重<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">    Array.prototype.unique=function()&#123;</div><div class="line">        var n = []</div><div class="line">        for(var i = 0 ;i &lt; this.length;i++)&#123;</div><div class="line">            if(n.indexOf(this[i])==-1)&#123;</div><div class="line">                n.push(this[i])</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        return n;</div><div class="line">    &#125;</div><div class="line">    var a = new Array(1,1,2,3,4,3)</div><div class="line">    alert(a.unique())</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+
       
     </div>
     <div class="article-info article-info-index">
@@ -238,6 +239,15 @@ js部分
 
   
 <nav id="article-nav">
+  
+    <a href="/2016/12/13/html篇/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
   
   
     <a href="/2016/11/20/个人简历/" id="article-nav-older" class="article-nav-link-wrap">
@@ -275,7 +285,7 @@ js部分
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="js面试篇" data-title="js面试篇" data-url="http://yoursite.com/2016/12/03/js面试篇/"></div>
+	<div class="ds-thread" data-thread-key="js面试篇" data-title="js篇" data-url="http://yoursite.com/2016/12/03/js面试篇/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

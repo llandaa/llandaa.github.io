@@ -8,12 +8,49 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>landaBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="title: html篇date: 2016-12-13 20:49:19tags:
+html基础篇1.浏览器的内核
+
+IE : trident内核
+Firefox : gecko内核
+Safair : webkit内核
+opera : 以前是presto内核，现在是Google的Blink内核
+chrome : Blink内核
+
+2.div+css布局和table布局有什么优点
+
+改版的时候更">
+<meta property="og:type" content="article">
 <meta property="og:title" content="landaBlog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/12/13/html篇/index.html">
 <meta property="og:site_name" content="landaBlog">
+<meta property="og:description" content="title: html篇date: 2016-12-13 20:49:19tags:
+html基础篇1.浏览器的内核
+
+IE : trident内核
+Firefox : gecko内核
+Safair : webkit内核
+opera : 以前是presto内核，现在是Google的Blink内核
+chrome : Blink内核
+
+2.div+css布局和table布局有什么优点
+
+改版的时候更">
+<meta property="og:updated_time" content="2016-12-13T15:07:34.038Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="landaBlog">
+<meta name="twitter:description" content="title: html篇date: 2016-12-13 20:49:19tags:
+html基础篇1.浏览器的内核
+
+IE : trident内核
+Firefox : gecko内核
+Safair : webkit内核
+opera : 以前是presto内核，现在是Google的Blink内核
+chrome : Blink内核
+
+2.div+css布局和table布局有什么优点
+
+改版的时候更">
   
   
   <link rel="stylesheet" href="/main.css">
@@ -128,9 +165,7 @@
 </nav>
 
       <div class="body-wrap">
-        
-  
-    <article id="post-html篇" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-html篇" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -171,10 +206,29 @@
 <li>突破浏览器并发限制</li>
 <li>节约Cookie带宽</li>
 <li>节约主域名的连接数，优化页面响应速度</li>
-<li>防止不必要的安全问题
-        <p class="article-more-link">
-          <a class="article-more-a"  href="/2016/12/13/html篇/#more">more >></a>
-        </p>
+<li>防止不必要的安全问题<a id="more"></a>
+6.cookies，sessionStorage和localStorage的区别？<br>sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。<br>web storage和cookie的区别</li>
+<li>Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候Cookie都会被发送过去，这样无形中浪费了带宽，另外cookie还需要指定作用域，不可以跨域调用。</li>
+<li>除此之外，Web Storage拥有setItem,getItem,removeItem,clear等方法，不像cookie需要前端开发者自己封装setCookie，getCookie。但是Cookie也是不可以或缺的：Cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在 ，而Web Storage仅仅是为了在本地“存储”数据而生。</li>
+</ul>
+<p>7.src和href的区别？<br>src用于替换当前元素，href用于在当前文档和引用资源之间确立联系。</p>
+<p>src是source的缩写，指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置；在请求src资源时会将其指向的资源下载并应用到文档内，例如js脚本，img图片和frame等元素。</p>
+<script src="”js.js”"></script>
+
+<p>当浏览器解析到该元素时，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。这也是为什么将js脚本放在底部而不是头部。</p>
+<p>href是Hypertext Reference的缩写，指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接，如果我们在文档中添加</p>
+<link href="”common.css”" rel="”stylesheet”/">
+
+<p>那么浏览器会识别该文档为css文件，就会并行下载资源并且不会停止对当前文档的处理。这也是为什么建议使用link方式来加载css，而不是使用@import方式。<br>8.网页制作用到的图片格式：png-8，png-24,jgeg,gif,svg,webp</p>
+<p>9.微格式：是一种让机器可读的语义化XHTML词汇的集合，是结构化数据的开放标准。是为特殊应用而制定的特殊格式。</p>
+<p>10.在css/js代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次js请求一般情况下有哪些地方会有缓存处理？<br>    dns缓存，cdn缓存，浏览器缓存，服务器缓存</p>
+<p>11.优化图片加载</p>
+<ul>
+<li>图片懒加载</li>
+<li>图片预加载技术</li>
+<li>雪碧图，base64，iconfont，SVGSprite</li>
+</ul>
+
       
     </div>
     <div class="article-info article-info-index">
@@ -190,191 +244,64 @@
   </div>
 </article>
 
-
-
-
-
-
-
-
-
-
   
-    <article id="post-js面试篇" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/03/js面试篇/">js篇</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="初级Javascript："><a href="#初级Javascript：" class="headerlink" title="初级Javascript："></a>初级Javascript：</h2><p>1.JavaScript是一种什么样的语言，它有哪些特点？<br>  没有标准答案。<br>  示例答案：JavaScript 是一种脚本语言，官方名称为 ECMAScript（因定义语言的标准为 ECMA-262）。JS 的主要特点：1. 语法类似于常见的高级语言，如 C 和 Java；2. 脚本语言，不需要编译就可以由解释器直接运行；3. 变量松散定义，属于弱类型语言；4. 面向对象的。<br>JS 最初是为网页设计而开发的，现在也是 Web 开发的重要语言。它支持对浏览器（浏览器对象模型，BOM）和 HTML 文档（文档对象模型，DOM）进行操作，而使网页呈现动态的交互特性。<br>严格的说，JS 只是 ECMAScript 的一种实现，是 ECMAScript 和 BOM、DOM 组成的一种 Web 开发技术。</p>
-<p>2.JavaScript的数据类型都有什么？<br>    基本数据类型：String,boolean,Number,Undefined, Null<br>    引用数据类型：Object(Array,Date,RegExp,Function)<br>    那么问题来了，如何判断某变量是否为数组数据类型？</p>
-<ul>
-<li>方法一.判断其是否具有“数组性质”，如slice()方法。可自己给该变量定义slice方法，故有时会失效</li>
-<li>方法二.obj instanceof Array 在某些IE版本中不正确</li>
-<li>方法三.方法一二皆有漏洞，在ECMA Script5中定义了新方法Array.isArray(), 保证其兼容性，最好的方法如下：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">if(typeof Array.isArray===&quot;undefined&quot;) </div><div class="line">&#123; </div><div class="line">  Array.isArray = function(arg)&#123; </div><div class="line">		return Object.prototype.toString.call(arg)===&quot;[object Array]&quot; </div><div class="line">	&#125;;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-        <p class="article-more-link">
-          <a class="article-more-a"  href="/2016/12/03/js面试篇/#more">more >></a>
-        </p>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/12/03/js面试篇/" class="archive-article-date">
-  	<time datetime="2016-12-03T04:47:23.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-03</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-个人简历" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/20/个人简历/">个人简历</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="个人资料："><a href="#个人资料：" class="headerlink" title="个人资料："></a>个人资料：</h3><pre><code>姓名：梁晶                 出生日期：1995年8月24日
-
-联系电话：18403553952      邮箱：18403553952@163.com
-
-居住地：杭州-西湖区
-
-求职意向：web前端工程师
-</code></pre><h3 id="教育背景："><a href="#教育背景：" class="headerlink" title="教育背景："></a>教育背景：</h3><pre><code>2012.09--2016.07  长治学院  计算机科学与技术   本科
-                  主修课程：高等语言程序设计、数据结构、Java程序设计语言、数据库原理及应用、软件工程、网站设计及
-                           开发、信息系统开发、操作系统、计算机网络、计算机组成原理等
-</code></pre><h3 id="项目经验："><a href="#项目经验：" class="headerlink" title="项目经验："></a>项目经验：</h3><pre><code>2016.11-2016.12   单页面网页开发               
-                  开发环境： HBuilder
-                  使用技术:  Angular.js
-                  项目描述： 使用Angular开发了单页面的暴走漫画，实现了发表带表情的评论，表单验证，存取cookies,
-                            点赞等基本功能.
-
-2016.10-2016.11   框架网页开发                 
-                  开发环境： HBuilder
-                  使用技术:  bootstrap Amaze UI Materialize
-                  项目描述： 使用Materialize开发了响应式的vivo首页、Funtouch OS二级页面以及360杀毒首页；使用
-                            Amaze UI开发了响应式的微博首页以及二级页面，同时开发了360手机卫士；使用bootstrap
-                            开发了电商后台页面，实现了数据的增删改查  
-
-2016.09-2016.10   响应式网页开发               
-                  开发环境： HBuilder
-                  使用技术： js jq css3 html5 fullpages
-                  项目描述： 使用fullpages 框架配合css3动画开发“keyboard”响应式小组网页，并使用svn实现组员之
-                            间的合作。个人开发了“有道词典”,使用到的技术有css3动画和html5中的canvas,并实现模
-                            拟翻译功能，配合使用的插件有iscroll和Swiper
-</code></pre>
-        <p class="article-more-link">
-          <a class="article-more-a"  href="/2016/11/20/个人简历/#more">more >></a>
-        </p>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/11/20/个人简历/" class="archive-article-date">
-  	<time datetime="2016-11-20T10:07:08.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-20</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-再来一次" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/11/再来一次/">再来一次</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="不行就再来一次，没什么大不了"><a href="#不行就再来一次，没什么大不了" class="headerlink" title="不行就再来一次，没什么大不了"></a>不行就再来一次，没什么大不了</h3>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/10/11/再来一次/" class="archive-article-date">
-  	<time datetime="2016-10-11T13:25:09.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-11</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
+<nav id="article-nav">
   
   
+    <a href="/2016/12/03/js面试篇/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js篇</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="html篇" data-title="" data-url="http://yoursite.com/2016/12/13/html篇/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"landa2016"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 
       </div>
@@ -396,8 +323,8 @@
 		fancybox: true,
 		mathjax: false,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
