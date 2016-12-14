@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-13T15:07:34.038Z</updated>
+  <updated>2016-12-14T08:01:21.643Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,15 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>html篇</title>
     <link href="http://yoursite.com/2016/12/13/html%E7%AF%87/"/>
     <id>http://yoursite.com/2016/12/13/html篇/</id>
-    <published>2016-12-13T12:49:19.471Z</published>
-    <updated>2016-12-13T15:07:34.038Z</updated>
+    <published>2016-12-13T12:49:19.000Z</published>
+    <updated>2016-12-14T08:01:21.643Z</updated>
     
-    <content type="html"><![CDATA[<hr>
-<p>title: html篇<br>date: 2016-12-13 20:49:19<br>tags:</p>
-<h2 id="html基础篇"><a href="#html基础篇" class="headerlink" title="html基础篇"></a>html基础篇</h2><p>1.浏览器的内核</p>
+    <content type="html"><![CDATA[<p>1.浏览器的内核</p>
 <ul>
 <li>IE : trident内核</li>
 <li>Firefox : gecko内核</li>
@@ -81,9 +79,7 @@
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;p&gt;title: html篇&lt;br&gt;date: 2016-12-13 20:49:19&lt;br&gt;tags:&lt;/p&gt;
-&lt;h2 id=&quot;html基础篇&quot;&gt;&lt;a href=&quot;#html基础篇&quot; class=&quot;headerlink&quot; title=&quot;html基础篇&quot;&gt;&lt;/a&gt;html基础篇&lt;/h2&gt;&lt;p&gt;1.浏览器的内核&lt;/p&gt;
+      &lt;p&gt;1.浏览器的内核&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;IE : trident内核&lt;/li&gt;
 &lt;li&gt;Firefox : gecko内核&lt;/li&gt;
@@ -218,99 +214,18 @@ js部分
   </entry>
   
   <entry>
-    <title>个人简历</title>
-    <link href="http://yoursite.com/2016/11/20/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/"/>
-    <id>http://yoursite.com/2016/11/20/个人简历/</id>
+    <title>个人项目</title>
+    <link href="http://yoursite.com/2016/11/20/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
+    <id>http://yoursite.com/2016/11/20/个人项目/</id>
     <published>2016-11-20T10:07:08.000Z</published>
-    <updated>2016-12-12T15:05:25.666Z</updated>
+    <updated>2016-12-14T13:46:00.265Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="个人资料："><a href="#个人资料：" class="headerlink" title="个人资料："></a>个人资料：</h3><pre><code>姓名：梁晶                 出生日期：1995年8月24日
-
-联系电话：18403553952      邮箱：18403553952@163.com
-
-居住地：杭州-西湖区
-
-求职意向：web前端工程师
-</code></pre><h3 id="教育背景："><a href="#教育背景：" class="headerlink" title="教育背景："></a>教育背景：</h3><pre><code>2012.09--2016.07  长治学院  计算机科学与技术   本科
-                  主修课程：高等语言程序设计、数据结构、Java程序设计语言、数据库原理及应用、软件工程、网站设计及
-                           开发、信息系统开发、操作系统、计算机网络、计算机组成原理等
-</code></pre><h3 id="项目经验："><a href="#项目经验：" class="headerlink" title="项目经验："></a>项目经验：</h3><pre><code>2016.11-2016.12   单页面网页开发               
-                  开发环境： HBuilder
-                  使用技术:  Angular.js
-                  项目描述： 使用Angular开发了单页面的暴走漫画，实现了发表带表情的评论，表单验证，存取cookies,
-                            点赞等基本功能.
-
-2016.10-2016.11   框架网页开发                 
-                  开发环境： HBuilder
-                  使用技术:  bootstrap Amaze UI Materialize
-                  项目描述： 使用Materialize开发了响应式的vivo首页、Funtouch OS二级页面以及360杀毒首页；使用
-                            Amaze UI开发了响应式的微博首页以及二级页面，同时开发了360手机卫士；使用bootstrap
-                            开发了电商后台页面，实现了数据的增删改查  
-
-2016.09-2016.10   响应式网页开发               
-                  开发环境： HBuilder
-                  使用技术： js jq css3 html5 fullpages
-                  项目描述： 使用fullpages 框架配合css3动画开发“keyboard”响应式小组网页，并使用svn实现组员之
-                            间的合作。个人开发了“有道词典”,使用到的技术有css3动画和html5中的canvas,并实现模
-                            拟翻译功能，配合使用的插件有iscroll和Swiper
-</code></pre><a id="more"></a>
-<pre><code>2016.08 -2016.09  网页开发
-                  开发环境：HBuilder
-                  使用技术：js  css  html
-                  项目描述：使用js,css,html等基本语言开发一些网页，曾做过的网页有自己设计的“小黄人旗舰店”一级页
-                           面和二级页面，并实现二级页面上的选择商品属性功能，其他网页有华为、华硕、开心消消乐。
-
-2016.07-2015.08   网页设计
-                  开发环境：windows 7
-                  使用技术：ps ai
-                  项目描述：使用ps , ai 设计“小黄人旗舰店”一级和二级页面，以及App界面
-</code></pre><h3 id="奖励情况："><a href="#奖励情况：" class="headerlink" title="奖励情况："></a>奖励情况：</h3><pre><code>2014.10           被评为“三好学生”
-2013-2015         连续两次获得三等奖学金
-</code></pre><h3 id="个人技能："><a href="#个人技能：" class="headerlink" title="个人技能："></a>个人技能：</h3><pre><code>熟练掌握JavaScript, jQuery , css3, html5等语言开发网页
-熟练掌握Bootstrap，AmazeUI , Materialize等框架开发响应式网页
-熟练掌握fullpage , angular.js 等框架开发单页面网页
-熟练掌握sass,less等CSS预处理器。
-熟练掌握Ajax的异步传输机制，能够很好的与后台进行数据交互
-熟悉ps , ai 等软件设计网页以及APP界面
-熟悉 SVN,Git等版本控制工具，并用Github配合Hexo搭建了自己的博客。
-</code></pre><h3 id="自我评价："><a href="#自我评价：" class="headerlink" title="自我评价："></a>自我评价：</h3><pre><code>具有较强的进取心、责任感、务实精神，团队合作能力和沟通能力。
-善于适应新环境，学习新知识，发现并总结新知识的内在规律。
-对工作充满热情与活力，热衷于IT行业。
-</code></pre><h3 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h3><p>360杀毒  <a href="https://llandaa.github.io/360kill-virus/360" target="_blank" rel="external">https://llandaa.github.io/360kill-virus/360</a><br>AUSU <a href="https://llandaa.github.io/ASUS/index" target="_blank" rel="external">https://llandaa.github.io/ASUS/index</a><br>开心消消乐 <a href="https://llandaa.github.io/fun-fest/index" target="_blank" rel="external">https://llandaa.github.io/fun-fest/index</a><br>华为 <a href="https://llandaa.github.io/huawei/index" target="_blank" rel="external">https://llandaa.github.io/huawei/index</a><br>微博 <a href="https://llandaa.github.io/weibo/weibo" target="_blank" rel="external">https://llandaa.github.io/weibo/weibo</a><br>微博视频页 <a href="https://llandaa.github.io/weibo-video/weibo-video" target="_blank" rel="external">https://llandaa.github.io/weibo-video/weibo-video</a><br>vivo <a href="https://llandaa.github.io/vivo/vivo" target="_blank" rel="external">https://llandaa.github.io/vivo/vivo</a><br>vivo-fun <a href="https://llandaa.github.io/vivo-fun/vivo-fun" target="_blank" rel="external">https://llandaa.github.io/vivo-fun/vivo-fun</a><br>电商后台管理 <a href="https://llandaa.github.io/shop-management/shopping-management" target="_blank" rel="external">https://llandaa.github.io/shop-management/shopping-management</a><br>小黄人旗舰店 <a href="https://llandaa.github.io/MINIONS-ONE/index" target="_blank" rel="external">https://llandaa.github.io/MINIONS-ONE/index</a><br>小黄人旗舰店商品详情页 <a href="https://llandaa.github.io/MINIONS-TWO/index" target="_blank" rel="external">https://llandaa.github.io/MINIONS-TWO/index</a><br>小组介绍KeyBoard <a href="https://llandaa.github.io/keyboard/index" target="_blank" rel="external">https://llandaa.github.io/keyboard/index</a><br>有道词典APP <a href="https://llandaa.github.io/youdao-dictionary/dictionary" target="_blank" rel="external">https://llandaa.github.io/youdao-dictionary/dictionary</a><br>360手机卫士APP <a href="https://llandaa.github.io/360phone/360safe" target="_blank" rel="external">https://llandaa.github.io/360phone/360safe</a></p>
+    <content type="html"><![CDATA[<h5 id="以下是我曾经做过的项目，欢迎大家提出意见！"><a href="#以下是我曾经做过的项目，欢迎大家提出意见！" class="headerlink" title="以下是我曾经做过的项目，欢迎大家提出意见！"></a>以下是我曾经做过的项目，欢迎大家提出意见！</h5><p>360杀毒  <a href="https://llandaa.github.io/360kill-virus/360" target="_blank" rel="external">https://llandaa.github.io/360kill-virus/360</a><br>AUSU <a href="https://llandaa.github.io/ASUS/index" target="_blank" rel="external">https://llandaa.github.io/ASUS/index</a><br>开心消消乐 <a href="https://llandaa.github.io/fun-fest/index" target="_blank" rel="external">https://llandaa.github.io/fun-fest/index</a><br>华为 <a href="https://llandaa.github.io/huawei/index" target="_blank" rel="external">https://llandaa.github.io/huawei/index</a><br>微博 <a href="https://llandaa.github.io/weibo/weibo" target="_blank" rel="external">https://llandaa.github.io/weibo/weibo</a><br>微博视频页 <a href="https://llandaa.github.io/weibo-video/weibo-video" target="_blank" rel="external">https://llandaa.github.io/weibo-video/weibo-video</a><br>vivo <a href="https://llandaa.github.io/vivo/vivo" target="_blank" rel="external">https://llandaa.github.io/vivo/vivo</a><br>vivo-fun <a href="https://llandaa.github.io/vivo-fun/vivo-fun" target="_blank" rel="external">https://llandaa.github.io/vivo-fun/vivo-fun</a><br>电商后台管理 <a href="https://llandaa.github.io/shop-management/shopping-management" target="_blank" rel="external">https://llandaa.github.io/shop-management/shopping-management</a><br>小黄人旗舰店 <a href="https://llandaa.github.io/MINIONS-ONE/index" target="_blank" rel="external">https://llandaa.github.io/MINIONS-ONE/index</a><br>小黄人旗舰店商品详情页 <a href="https://llandaa.github.io/MINIONS-TWO/index" target="_blank" rel="external">https://llandaa.github.io/MINIONS-TWO/index</a><br>小组介绍KeyBoard <a href="https://llandaa.github.io/keyboard/index" target="_blank" rel="external">https://llandaa.github.io/keyboard/index</a><br>有道词典APP <a href="https://llandaa.github.io/youdao-dictionary/dictionary" target="_blank" rel="external">https://llandaa.github.io/youdao-dictionary/dictionary</a><br>360手机卫士APP <a href="https://llandaa.github.io/360phone/360safe" target="_blank" rel="external">https://llandaa.github.io/360phone/360safe</a></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;个人资料：&quot;&gt;&lt;a href=&quot;#个人资料：&quot; class=&quot;headerlink&quot; title=&quot;个人资料：&quot;&gt;&lt;/a&gt;个人资料：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;姓名：梁晶                 出生日期：1995年8月24日
-
-联系电话：18403553952      邮箱：18403553952@163.com
-
-居住地：杭州-西湖区
-
-求职意向：web前端工程师
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;教育背景：&quot;&gt;&lt;a href=&quot;#教育背景：&quot; class=&quot;headerlink&quot; title=&quot;教育背景：&quot;&gt;&lt;/a&gt;教育背景：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;2012.09--2016.07  长治学院  计算机科学与技术   本科
-                  主修课程：高等语言程序设计、数据结构、Java程序设计语言、数据库原理及应用、软件工程、网站设计及
-                           开发、信息系统开发、操作系统、计算机网络、计算机组成原理等
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;项目经验：&quot;&gt;&lt;a href=&quot;#项目经验：&quot; class=&quot;headerlink&quot; title=&quot;项目经验：&quot;&gt;&lt;/a&gt;项目经验：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;2016.11-2016.12   单页面网页开发               
-                  开发环境： HBuilder
-                  使用技术:  Angular.js
-                  项目描述： 使用Angular开发了单页面的暴走漫画，实现了发表带表情的评论，表单验证，存取cookies,
-                            点赞等基本功能.
-
-2016.10-2016.11   框架网页开发                 
-                  开发环境： HBuilder
-                  使用技术:  bootstrap Amaze UI Materialize
-                  项目描述： 使用Materialize开发了响应式的vivo首页、Funtouch OS二级页面以及360杀毒首页；使用
-                            Amaze UI开发了响应式的微博首页以及二级页面，同时开发了360手机卫士；使用bootstrap
-                            开发了电商后台页面，实现了数据的增删改查  
-
-2016.09-2016.10   响应式网页开发               
-                  开发环境： HBuilder
-                  使用技术： js jq css3 html5 fullpages
-                  项目描述： 使用fullpages 框架配合css3动画开发“keyboard”响应式小组网页，并使用svn实现组员之
-                            间的合作。个人开发了“有道词典”,使用到的技术有css3动画和html5中的canvas,并实现模
-                            拟翻译功能，配合使用的插件有iscroll和Swiper
-&lt;/code&gt;&lt;/pre&gt;
+      &lt;h5 id=&quot;以下是我曾经做过的项目，欢迎大家提出意见！&quot;&gt;&lt;a href=&quot;#以下是我曾经做过的项目，欢迎大家提出意见！&quot; class=&quot;headerlink&quot; title=&quot;以下是我曾经做过的项目，欢迎大家提出意见！&quot;&gt;&lt;/a&gt;以下是我曾经做过的项目，欢迎大家提出意见！&lt;/
     
     </summary>
     
