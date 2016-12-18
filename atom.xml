@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-14T08:01:21.643Z</updated>
+  <updated>2016-12-18T07:24:40.032Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,90 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IE6bug解决</title>
+    <link href="http://yoursite.com/2016/12/18/IE6bug%E8%A7%A3%E5%86%B3/"/>
+    <id>http://yoursite.com/2016/12/18/IE6bug解决/</id>
+    <published>2016-12-18T05:59:55.000Z</published>
+    <updated>2016-12-18T07:24:40.032Z</updated>
+    
+    <content type="html"><![CDATA[<ol>
+<li>如何在IE6及更早浏览器中定义小高度的容器？<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#test&#123;overflow:hidden;height:1px;font-size:0;line-height:0;&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>IE6及更早浏览器之所以无法直接定义较小高度的容器是因为默认会有行高</p>
+<ol>
+<li>如何解决IE6及更早浏览器浮动时产生双倍边距的BUG？<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#test&#123;display:inline;&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>当在IE6及更早浏览器中出现浮动后margin值解析为双倍的情况，设置该元素的display属性为inline即可。</p>
+<ol>
+<li>如何在IE6及更早浏览器下模拟min-height效果？<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#test&#123;min-height:100px;_height:100px&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>注意此时#test不能再设置overflow的值为hidden，否则模拟min-height效果将失效</p>
+<ol>
+<li><p>如何解决按钮在IE7及更早浏览器下随着value增多两边留白也随着增加的问题？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">input button &#123;overflow:visible;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>如何解决IE7及更早浏览器下当li中出现2个或以上的浮动时，li之间产生的空白间隙的BUG？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">li&#123;vertical-align:top&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>除了top值，还可以设置为text-top | middle | bottom | text-bottom，甚至特定的<length>和<percentage>值都可以</percentage></length></p>
+<ol>
+<li>如何解决IE6及更早浏览器下的3像素BUG？<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">		&lt;title&gt;&lt;/title&gt;</div><div class="line">		&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">			.main&#123;width:950px;background:#eee;&#125;</div><div class="line">			.content&#123;float:left;width:750px;height:100px;background:#ccc;_margin-right:-3px;&#125;</div><div class="line">			.aside&#123;height:100px;background:#aaa;&#125;</div><div class="line">		&lt;/style&gt;</div><div class="line">	&lt;/head&gt;</div><div class="line">	&lt;body&gt;</div><div class="line">		&lt;div class=&quot;main&quot;&gt;</div><div class="line">			&lt;div class=&quot;content&quot;&gt;content&lt;/div&gt;</div><div class="line">			&lt;div class=&quot;aside&quot;&gt;aside&lt;/div&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在IE6及更早浏览器下为.content设置margin-right:-3px；也可以设置.aside为浮动</p>
+<ol>
+<li>如何解决IE6下的文本溢出BUG（江湖匪号：“谍影重重”或“一只猪的故事”）？<br>BUG重现<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">	&lt;html&gt;</div><div class="line">		&lt;head&gt;</div><div class="line">			&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">			&lt;title&gt;&lt;/title&gt;</div><div class="line">			&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">				.test&#123;zoom:1;overflow:hidden;width:500px;&#125;</div><div class="line">				.box1&#123;float:left;width:100px;&#125;</div><div class="line">				.box2&#123;float:right;width:400px;&#125;</div><div class="line">			&lt;/style&gt;</div><div class="line">		&lt;/head&gt;</div><div class="line">		&lt;body&gt;</div><div class="line">			&lt;div class=&quot;test&quot;&gt;</div><div class="line">				&lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;</div><div class="line">				&lt;!-- 注释 --&gt;</div><div class="line">				&lt;div class=&quot;box2&quot;&gt;↓这就是多出来的那只猪&lt;/div&gt;</div><div class="line">			&lt;/div&gt;</div><div class="line">		&lt;/body&gt;</div><div class="line">	&lt;/html&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>运行如上代码，你会发现文字发生了溢出，在IE6下会多出一只“猪”。造成此BUG的原因可能是多重混合的，如浮动，注释，宽高定义等等。并且注释条数越多，溢出的文本也会随之增多。<br>解决办法：<br>删除box1和box2之间所有的注释；<br>不设置浮动；<br>调整box1或box2的宽度，比如将box的宽度调整为90px</p>
+<ol>
+<li>如何解决IE6使用滤镜PNG图片透明后，容器内链接失效的问题？<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">div&#123;width:300px;height:100px;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=&apos;*.png&apos;);&#125;</div><div class="line">a&#123;_position:relative;&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>解决方法是为容器内的链接定义相对定位属性position的值为relative</p>
+<ol>
+<li>如何解决IE6无法识别伪对象:first-letter/:first-line的问题？<br>方法1：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p:first-letter &#123;float:left;font-size:40px;font-weight:bold;&#125;</div><div class="line">p:first-line &#123;color:#090;&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>增加空格：在伪对象选择符:first-letter/:first-line与包含规则的花括号”{“间增加空格。<br>方法2：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">p:first-letter</div><div class="line">&#123;float:left;font-size:40px;font-weight:bold;&#125;</div><div class="line">p:first-line</div><div class="line">&#123;color:#090;&#125;</div></pre></td></tr></table></figure></p>
+<p>换行：将整个花括号”{“规则区域换行。细节参见E:first-letter和E:first-line选择符</p>
+<ol>
+<li>如何解决IE6会忽略同一条样式体内的!important规则的问题？<br>BUG重现：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">div&#123;color:#f00!important;color:#000;&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>如上代码，IE6及以下浏览器div的文本颜色为#000，!important并没有覆盖后面的规则，也就是说!important被忽略了。解决方案是将该样式拆分为2条<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">div&#123;color:#f00!important&#125;</div><div class="line">div&#123;color:#0f0&#125;</div></pre></td></tr></table></figure></p>
+<ol>
+<li>如何解决IE6及更早浏览器下当li内部元素是定义了display:block的内联元素时底部产生空白的问题？<br>BUG重现<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">		&lt;title&gt;&lt;/title&gt;</div><div class="line">		&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">			a,span&#123;display:block;background:#ddd;zoom:1&#125;</div><div class="line">		&lt;/style&gt;</div><div class="line">	&lt;/head&gt;</div><div class="line">	&lt;body&gt;</div><div class="line">		&lt;ul&gt;</div><div class="line">			&lt;li&gt;&lt;a href=&quot;../&quot;&gt;CSS参考手册&lt;/a&gt;&lt;/li&gt;</div><div class="line">			&lt;li&gt;&lt;a href=&quot;../&quot;&gt;CSS探索之旅&lt;/a&gt;&lt;/li&gt;</div><div class="line">			&lt;li&gt;&lt;a href=&quot;../&quot;&gt;web前端实验室&lt;/a&gt;&lt;/li&gt;</div><div class="line">			&lt;li&gt;&lt;span&gt;测试li内部元素为设置了display:block的内联元素时底部产生空白&lt;/span&gt;&lt;/li&gt;</div><div class="line">		&lt;/ul&gt;</div><div class="line">	&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>如上代码，IE6及更早浏览器每个li内部的内联元素底部都会产生空白。解决方案是给li内部的内联元素再加上zoom:1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">a,span&#123;display:block;background:#ddd;zoom:1&#125;</div></pre></td></tr></table></figure></p>
+<ol>
+<li>如何解决IE6及更早浏览器下未定义宽度的浮动或绝对定位元素会被内部设置了zoom:1的块元素撑开的问题？<br>BUG重现<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">		&lt;title&gt;&lt;/title&gt;</div><div class="line">		&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">			#test&#123;zoom:1;overflow:hidden;border:1px solid #ddd;background:#eee;&#125;</div><div class="line">			#test h1&#123;float:left;&#125;</div><div class="line">			#test .nav&#123;float:right;background:#aaa;&#125;</div><div class="line">			#test .nav ul&#123;zoom:1;overflow:hidden;margin:0;padding:0;list-style:none;&#125;</div><div class="line">			#test .nav li&#123;float:left;margin:0 5px;&#125;</div><div class="line">		&lt;/style&gt;</div><div class="line">	&lt;/head&gt;</div><div class="line">	&lt;body&gt;</div><div class="line">		&lt;div id=&quot;test&quot;&gt;</div><div class="line">			&lt;h1&gt;Doyoe&lt;/h1&gt;</div><div class="line">			&lt;div class=&quot;nav&quot;&gt;</div><div class="line">				&lt;ul&gt;</div><div class="line">					&lt;li&gt;&lt;a href=&quot;../&quot;&gt;CSS参考手册&lt;/a&gt;&lt;/li&gt;</div><div class="line">					&lt;li&gt;&lt;a href=&quot;../&quot;&gt;CSS探索之旅&lt;/a&gt;&lt;/li&gt;</div><div class="line">					&lt;li&gt;&lt;a href=&quot;../&quot;&gt;web前端实验室&lt;/a&gt;&lt;/li&gt;</div><div class="line">				&lt;/ul&gt;</div><div class="line">			&lt;/div&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>如上代码，IE6及更早浏览器div.nav会被设置了zoom:1的ul给撑开。<br>列举几个解决方法：<br>　设置ul为inline元素；<br>　设置ul的width</p>
+<ol>
+<li>如何解决IE7下子元素相对定位时父元素overflow属性的auto|hidden失效的问题？<br>BUG重现：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">	&lt;head&gt;</div><div class="line">		&lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">		&lt;title&gt;&lt;/title&gt;</div><div class="line">		&lt;style type=&quot;text/css&quot;&gt;</div><div class="line">			div&#123;overflow:auto;width:260px;height:80px;border:1px solid #ddd;&#125;</div><div class="line">			p&#123;position:relative;margin:0;&#125;</div><div class="line">		&lt;/style&gt;</div><div class="line">	&lt;/head&gt;</div><div class="line">	&lt;body&gt;</div><div class="line">		&lt;div&gt;</div><div class="line">			&lt;p&gt;如果我是相对定位，我的父元素overflow属性设置为auto|hidden将失效。如果你使用的是IE及更早浏览器，你将可以看到这个BUG&lt;/p&gt;</div><div class="line">			&lt;p&gt;如果我是相对定位，我的父元素overflow属性设置为auto|hidden将失效。如果你使用的是IE及更早浏览器，你将可以看到这个BUG&lt;/p&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>如上代码，在IE7你会看到div的滚动条将无法工作。解决方案是给div也设置相对定位position:relative</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;如何在IE6及更早浏览器中定义小高度的容器？&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td cl
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>html篇</title>

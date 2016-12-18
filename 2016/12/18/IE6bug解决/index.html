@@ -6,14 +6,42 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>landaBlog</title>
+  <title>IE6bug解决 | landaBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="landaBlog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="如何在IE6及更早浏览器中定义小高度的容器？1#test&amp;#123;overflow:hidden;height:1px;font-size:0;line-height:0;&amp;#125;
+
+
+IE6及更早浏览器之所以无法直接定义较小高度的容器是因为默认会有行高
+
+如何解决IE6及更早浏览器浮动时产生双倍边距的BUG？1#test&amp;#123;display:inline;&amp;#125;
+
+
+当在IE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IE6bug解决">
+<meta property="og:url" content="http://yoursite.com/2016/12/18/IE6bug解决/index.html">
 <meta property="og:site_name" content="landaBlog">
+<meta property="og:description" content="如何在IE6及更早浏览器中定义小高度的容器？1#test&amp;#123;overflow:hidden;height:1px;font-size:0;line-height:0;&amp;#125;
+
+
+IE6及更早浏览器之所以无法直接定义较小高度的容器是因为默认会有行高
+
+如何解决IE6及更早浏览器浮动时产生双倍边距的BUG？1#test&amp;#123;display:inline;&amp;#125;
+
+
+当在IE">
+<meta property="og:updated_time" content="2016-12-18T07:24:40.032Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="landaBlog">
+<meta name="twitter:title" content="IE6bug解决">
+<meta name="twitter:description" content="如何在IE6及更早浏览器中定义小高度的容器？1#test&amp;#123;overflow:hidden;height:1px;font-size:0;line-height:0;&amp;#125;
+
+
+IE6及更早浏览器之所以无法直接定义较小高度的容器是因为默认会有行高
+
+如何解决IE6及更早浏览器浮动时产生双倍边距的BUG？1#test&amp;#123;display:inline;&amp;#125;
+
+
+当在IE">
   
   
   <link rel="stylesheet" href="/main.css">
@@ -128,9 +156,7 @@
 </nav>
 
       <div class="body-wrap">
-        
-  
-    <article id="post-IE6bug解决" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-IE6bug解决" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -139,8 +165,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/18/IE6bug解决/">IE6bug解决</a>
+    <h1 class="article-title" itemprop="name">
+      IE6bug解决
     </h1>
   
 
@@ -229,238 +255,64 @@
   </div>
 </article>
 
-
-
-
-
-
-
-
-
-
   
-    <article id="post-html篇" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/13/html篇/">html篇</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.浏览器的内核</p>
-<ul>
-<li>IE : trident内核</li>
-<li>Firefox : gecko内核</li>
-<li>Safair : webkit内核</li>
-<li>opera : 以前是presto内核，现在是Google的Blink内核</li>
-<li>chrome : Blink内核</li>
-</ul>
-<p>2.div+css布局和table布局有什么优点</p>
-<ul>
-<li>改版的时候更加方便，只要改css文件即可</li>
-<li>页面加载速度更快，结构化清晰，页面显示简洁</li>
-<li>表现与结构相分离</li>
-<li>易于优化，搜索引擎更友好，排名更容易靠前</li>
-</ul>
-<p>3.a.img的alt和title</p>
-<ul>
-<li>alt(alt text):为不能显示图像、窗体或applets的用户代理（UA），alt属性用来指定替换文字。替换文字的语言由lang属性指定。(在IE浏览器下会在没有title时把alt当成 tool tip显示)</li>
-<li>title(tool tip):该属性为设置该属性的元素提供建议性的信息。</li>
-</ul>
-<p>4.渐进增强和优雅降级之间的区别</p>
-<ul>
-<li>渐进增强 progressive enhancement：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。</li>
-<li>优雅降级 graceful degradation：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</li>
-</ul>
-<p>5.为什么利用多个域名来存储网站资源会更有效？</p>
-<ul>
-<li>CDN缓存更方便</li>
-<li>突破浏览器并发限制</li>
-<li>节约Cookie带宽</li>
-<li>节约主域名的连接数，优化页面响应速度</li>
-<li>防止不必要的安全问题
-        <p class="article-more-link">
-          <a class="article-more-a"  href="/2016/12/13/html篇/#more">more >></a>
-        </p>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/12/13/html篇/" class="archive-article-date">
-  	<time datetime="2016-12-13T12:49:19.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-13</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-js面试篇" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/03/js面试篇/">js篇</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="初级Javascript："><a href="#初级Javascript：" class="headerlink" title="初级Javascript："></a>初级Javascript：</h2><p>1.JavaScript是一种什么样的语言，它有哪些特点？<br>  没有标准答案。<br>  示例答案：JavaScript 是一种脚本语言，官方名称为 ECMAScript（因定义语言的标准为 ECMA-262）。JS 的主要特点：1. 语法类似于常见的高级语言，如 C 和 Java；2. 脚本语言，不需要编译就可以由解释器直接运行；3. 变量松散定义，属于弱类型语言；4. 面向对象的。<br>JS 最初是为网页设计而开发的，现在也是 Web 开发的重要语言。它支持对浏览器（浏览器对象模型，BOM）和 HTML 文档（文档对象模型，DOM）进行操作，而使网页呈现动态的交互特性。<br>严格的说，JS 只是 ECMAScript 的一种实现，是 ECMAScript 和 BOM、DOM 组成的一种 Web 开发技术。</p>
-<p>2.JavaScript的数据类型都有什么？<br>    基本数据类型：String,boolean,Number,Undefined, Null<br>    引用数据类型：Object(Array,Date,RegExp,Function)<br>    那么问题来了，如何判断某变量是否为数组数据类型？</p>
-<ul>
-<li>方法一.判断其是否具有“数组性质”，如slice()方法。可自己给该变量定义slice方法，故有时会失效</li>
-<li>方法二.obj instanceof Array 在某些IE版本中不正确</li>
-<li>方法三.方法一二皆有漏洞，在ECMA Script5中定义了新方法Array.isArray(), 保证其兼容性，最好的方法如下：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">if(typeof Array.isArray===&quot;undefined&quot;) </div><div class="line">&#123; </div><div class="line">  Array.isArray = function(arg)&#123; </div><div class="line">		return Object.prototype.toString.call(arg)===&quot;[object Array]&quot; </div><div class="line">	&#125;;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-        <p class="article-more-link">
-          <a class="article-more-a"  href="/2016/12/03/js面试篇/#more">more >></a>
-        </p>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/12/03/js面试篇/" class="archive-article-date">
-  	<time datetime="2016-12-03T04:47:23.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-03</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-个人项目" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/20/个人项目/">个人项目</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="以下是我曾经做过的项目，欢迎大家提出意见！"><a href="#以下是我曾经做过的项目，欢迎大家提出意见！" class="headerlink" title="以下是我曾经做过的项目，欢迎大家提出意见！"></a>以下是我曾经做过的项目，欢迎大家提出意见！</h5><p>360杀毒  <a href="https://llandaa.github.io/360kill-virus/360" target="_blank" rel="external">https://llandaa.github.io/360kill-virus/360</a><br>AUSU <a href="https://llandaa.github.io/ASUS/index" target="_blank" rel="external">https://llandaa.github.io/ASUS/index</a><br>开心消消乐 <a href="https://llandaa.github.io/fun-fest/index" target="_blank" rel="external">https://llandaa.github.io/fun-fest/index</a><br>华为 <a href="https://llandaa.github.io/huawei/index" target="_blank" rel="external">https://llandaa.github.io/huawei/index</a><br>微博 <a href="https://llandaa.github.io/weibo/weibo" target="_blank" rel="external">https://llandaa.github.io/weibo/weibo</a><br>微博视频页 <a href="https://llandaa.github.io/weibo-video/weibo-video" target="_blank" rel="external">https://llandaa.github.io/weibo-video/weibo-video</a><br>vivo <a href="https://llandaa.github.io/vivo/vivo" target="_blank" rel="external">https://llandaa.github.io/vivo/vivo</a><br>vivo-fun <a href="https://llandaa.github.io/vivo-fun/vivo-fun" target="_blank" rel="external">https://llandaa.github.io/vivo-fun/vivo-fun</a><br>电商后台管理 <a href="https://llandaa.github.io/shop-management/shopping-management" target="_blank" rel="external">https://llandaa.github.io/shop-management/shopping-management</a><br>小黄人旗舰店 <a href="https://llandaa.github.io/MINIONS-ONE/index" target="_blank" rel="external">https://llandaa.github.io/MINIONS-ONE/index</a><br>小黄人旗舰店商品详情页 <a href="https://llandaa.github.io/MINIONS-TWO/index" target="_blank" rel="external">https://llandaa.github.io/MINIONS-TWO/index</a><br>小组介绍KeyBoard <a href="https://llandaa.github.io/keyboard/index" target="_blank" rel="external">https://llandaa.github.io/keyboard/index</a><br>有道词典APP <a href="https://llandaa.github.io/youdao-dictionary/dictionary" target="_blank" rel="external">https://llandaa.github.io/youdao-dictionary/dictionary</a><br>360手机卫士APP <a href="https://llandaa.github.io/360phone/360safe" target="_blank" rel="external">https://llandaa.github.io/360phone/360safe</a></p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/11/20/个人项目/" class="archive-article-date">
-  	<time datetime="2016-11-20T10:07:08.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-20</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-再来一次" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/11/再来一次/">再来一次</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="不行就再来一次，没什么大不了"><a href="#不行就再来一次，没什么大不了" class="headerlink" title="不行就再来一次，没什么大不了"></a>不行就再来一次，没什么大不了</h3>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/10/11/再来一次/" class="archive-article-date">
-  	<time datetime="2016-10-11T13:25:09.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-11</time>
-</a>
-      
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
+<nav id="article-nav">
   
   
+    <a href="/2016/12/13/html篇/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">html篇</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="IE6bug解决" data-title="IE6bug解决" data-url="http://yoursite.com/2016/12/18/IE6bug解决/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"landa2016"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 
       </div>
@@ -482,8 +334,8 @@
 		fancybox: true,
 		mathjax: false,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
