@@ -34,7 +34,7 @@
     <link href="http://yoursite.com/2016/12/26/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/"/>
     <id>http://yoursite.com/2016/12/26/跨域问题/</id>
     <published>2016-12-26T14:40:50.000Z</published>
-    <updated>2017-01-09T14:02:34.916Z</updated>
+    <updated>2017-01-09T14:08:55.453Z</updated>
     
     <content type="html"><![CDATA[<p>当我们在页面中通过ajax    请求其他服务器数据时，由于浏览器对于JavaScript的同源策略，客户端就会发生跨域问题。所谓同源策略，指的是一段脚本只能请求来自相同来源（相同域名，端口号，协议）的资源。<br>如果上面XMLHttpRequest请求的服务地址与当前文件不同源的话，浏览器就会出现错误：<br>那么如何解决这类跨域问题？<br>（1）利用CORS跨域<br>   “跨域资源共享”（Cross-origin resource sharing,简称CORS）。CORS是在XHR2中拓展能力，使用方法很简单，在服务端设置：<br>    Header set Access-Control-Allow-Origin *<br>   这种设置将接受所有域名的跨域请求，也可以指定具体网址，也可以对域名进行限定：<br>    Header set Access-Control-Allow-Origin <a href="http://www.test.com" target="_blank" rel="external">http://www.test.com</a><br>   然而，这种方式的局限性在于要求客户端支持，并且服务端进行相关设置。在这两者满足的条件下，进行CORS进行跨域不仅支持所有类型的HTTP请求，而且开发者可以使用普通的XMLHttpRequest发起请求和获得数据，比起JSONP有更好的错误处理。<br>（2）利用JSONP实现跨域<br>   对于较老的浏览器，它们往往不支持CORS，因此使用JSONP进行跨域也是很常见的一种方式。<br>   JSONP实现的原理如下：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">funciton getJSONP(url,callback)&#123;</div><div class="line">	var funcName = getUniqueName(); //利用时间戳或者自增计数器获得唯一函数名</div><div class="line">	url += &quot;?callback&quot; + funcName; //将函数名作为参数添加至url中</div><div class="line">	var script = document.createElement(&apos;script&apos;) //动态构建script标签</div><div class="line">	getJSONP[funcName] = function(response)&#123;</div><div class="line">		try&#123;</div><div class="line">			callback(response) //处理响应数据</div><div class="line">		&#125;</div><div class="line">		finally&#123;</div><div class="line">			//即使回调函数或响应抛出错误，清除动态增加内容</div><div class="line">			delete getJSONP[funcName];</div><div class="line">			script.parentNode.removeChild(script)</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	//触发HTTP请求</div><div class="line">	script.src = url;</div><div class="line">	document.body.appendChild(script);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
@@ -56,7 +56,7 @@
     <link href="http://yoursite.com/2016/12/18/IE6bug%E8%A7%A3%E5%86%B3/"/>
     <id>http://yoursite.com/2016/12/18/IE6bug解决/</id>
     <published>2016-12-18T05:59:55.000Z</published>
-    <updated>2016-12-18T07:24:40.032Z</updated>
+    <updated>2017-01-09T14:09:29.343Z</updated>
     
     <content type="html"><![CDATA[<ol>
 <li>如何在IE6及更早浏览器中定义小高度的容器？<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#test&#123;overflow:hidden;height:1px;font-size:0;line-height:0;&#125;</div></pre></td></tr></table></figure>
@@ -74,11 +74,12 @@
 </ol>
 <p>注意此时#test不能再设置overflow的值为hidden，否则模拟min-height效果将失效</p>
 <ol>
-<li><p>如何解决按钮在IE7及更早浏览器下随着value增多两边留白也随着增加的问题？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">input button &#123;overflow:visible;&#125;</div></pre></td></tr></table></figure>
+<li>如何解决按钮在IE7及更早浏览器下随着value增多两边留白也随着增加的问题？<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">input button &#123;overflow:visible;&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>如何解决IE7及更早浏览器下当li中出现2个或以上的浮动时，li之间产生的空白间隙的BUG？</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">li&#123;vertical-align:top&#125;</div></pre></td></tr></table></figure>
+</ol>
+<a id="more"></a>
+<ol>
+<li>如何解决IE7及更早浏览器下当li中出现2个或以上的浮动时，li之间产生的空白间隙的BUG？<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">li&#123;vertical-align:top&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>除了top值，还可以设置为text-top | middle | bottom | text-bottom，甚至特定的<length>和<percentage>值都可以</percentage></length></p>
@@ -128,7 +129,24 @@
     <summary type="html">
     
       &lt;ol&gt;
-&lt;li&gt;如何在IE6及更早浏览器中定义小高度的容器？&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td cl
+&lt;li&gt;如何在IE6及更早浏览器中定义小高度的容器？&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;#test&amp;#123;overflow:hidden;height:1px;font-size:0;line-height:0;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;IE6及更早浏览器之所以无法直接定义较小高度的容器是因为默认会有行高&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如何解决IE6及更早浏览器浮动时产生双倍边距的BUG？&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;#test&amp;#123;display:inline;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当在IE6及更早浏览器中出现浮动后margin值解析为双倍的情况，设置该元素的display属性为inline即可。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如何在IE6及更早浏览器下模拟min-height效果？&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;#test&amp;#123;min-height:100px;_height:100px&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意此时#test不能再设置overflow的值为hidden，否则模拟min-height效果将失效&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;如何解决按钮在IE7及更早浏览器下随着value增多两边留白也随着增加的问题？&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;input button &amp;#123;overflow:visible;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
