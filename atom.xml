@@ -56,7 +56,7 @@
     <link href="http://yoursite.com/2016/12/18/IE6bug%E8%A7%A3%E5%86%B3/"/>
     <id>http://yoursite.com/2016/12/18/IE6bug解决/</id>
     <published>2016-12-18T05:59:55.000Z</published>
-    <updated>2017-01-09T14:09:29.343Z</updated>
+    <updated>2017-01-09T14:10:35.567Z</updated>
     
     <content type="html"><![CDATA[<ol>
 <li>如何在IE6及更早浏览器中定义小高度的容器？<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#test&#123;overflow:hidden;height:1px;font-size:0;line-height:0;&#125;</div></pre></td></tr></table></figure>
